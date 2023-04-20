@@ -87,7 +87,7 @@ button:hover {
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 40px;
     color:  #003e1f;
     text-align: center;
     margin: 25px;
@@ -127,6 +127,12 @@ p {
 }
 
 .p-msgSucess {
+    color: blue;
+    font-size: 40px;
+    padding: 0px 50px;
+}
+
+.p-msgFail {
     color: red;
     font-size: 40px;
     padding: 0px 50px;

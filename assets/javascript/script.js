@@ -191,17 +191,73 @@ var emailInput = document.querySelector('#emailInput');
 var signUpBtn = document.querySelector('#signUpBtn')
 var footer = document.querySelector(".footer")
 
-
-function submitEmailForm (){
-    var confirmMsg = document.createElement('p');
-    confirmMsg.classList.add('p-msgSucess')
-    confirmMsg.textContent = 'Thanks for signing up! watch your email for delicious tidings soon'
-    input.value;
-    subscForm.remove();
-    footer.remove();
-    email.appendChild(confirmMsg)
-    console.log(confirmMsg);
+function submitEmail (){
+    if(
+        firstNameInput.value === "" &&
+        lastNameInput.value === "" &&
+        emailInput.value === ""
+    ){
+        var confirmMsg = document.createElement('p');
+            confirmMsg.classList.add('p-msgFail');
+            confirmMsg.textContent = 
+            'You did not fill out your Name, Last Name or Email, please try again';
+            subscForm.remove();
+            footer.remove();
+            email.appendChild(confirmMsg)
+            console.log(confirmMsg)
+    } else if (
+        firstNameInput.value === ""
+    ){
+        var confirmMsg = document.createElement('p');
+            confirmMsg.classList.add("p-msgFail");
+            confirmMsg.textContent = 
+            "Be sure to fill out your First Name and try again";
+            subscForm.remove();
+            footer.remove();
+            email.appendChild(confirmMsg)
+    } else if(
+        lastNameInput.value === ""
+    ){
+        var confirmMsg = document.createElement('p');
+            confirmMsg.classList.add('p-msgFail');
+            confirmMsg.textContent = 
+            'Be sure to fill out your Last Name and try again';
+            subscForm.remove();
+            footer.remove();
+            email.appendChild(confirmMsg)
+    } else if (
+        emailInput.value === ""
+    ){
+        var confirmMsg = document.createElement('p');
+            confirmMsg.classList.add('p-msgFail');
+            confirmMsg.textContent = 
+            'Be sure to fill out your Email address and try again';
+            subscForm.remove();
+            footer.remove();
+            email.appendChild(confirmMsg)
+    }  else {
+        var confirmMsg = document.createElement('p');
+            confirmMsg.classList.add('p-msgSucess')
+            confirmMsg.textContent = 'Thanks for signing up! watch your email for delicious tidings soon'
+            input.value
+            subscForm.remove();
+            footer.remove();
+            email.appendChild(confirmMsg)
+    }    
 }
-signUpBtn.addEventListener('click', submitEmailForm)
+signUpBtn.addEventListener('click', submitEmail)
+
+// **first function created without alerts ** 
+// function submitEmailForm (){
+//     var confirmMsg = document.createElement('p');
+//     confirmMsg.classList.add('p-msgSucess')
+//     confirmMsg.textContent = 'Thanks for signing up! watch your email for delicious tidings soon'
+//     input.value;
+//     subscForm.remove();
+//     footer.remove();
+//     email.appendChild(confirmMsg)
+//     console.log(confirmMsg);
+// }
+// signUpBtn.addEventListener('click', submitEmailForm)
 
 
