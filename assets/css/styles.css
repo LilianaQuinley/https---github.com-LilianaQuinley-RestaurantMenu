@@ -9,25 +9,29 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    /* // 150px = header 75px footer 75px */
+    /* min-height: calc(100vh - 150px); */
+    min-height: 100vh;
 }
 
 .header {
     display:  flex;
     align-items: center;
     justify-content: space-between;
-    height: 150px;
-    padding: 0px 50px;
-    border-bottom: 2px solid black;
+    padding:0px 75px;
+    margin-bottom: 25px;
+    /* margin-left: 50px; */
 }
 h1 {
     color:  #ba2d0b;
     font-size: 50px;
     line-height: 0.85;
-    padding-top: 50px;
+    padding-top: 15px;
 }
 
 a {
-    color: #003e1f;
+    color: blue;
     cursor: pointer;
     text-decoration: none;
     font-size: 18px;
@@ -69,7 +73,7 @@ button {
 
 button:hover {
     background-color: #ba2d0b;
-    color: #003e1f;
+    color: blue;
     transform: scale(1.2, 1.2);
     box-shadow: 0px 0px 50px blueviolet;
 }
@@ -84,8 +88,9 @@ button:hover {
 
 h2 {
     font-size: 35px;
-    color: #01110a;
+    color:  #003e1f;
     text-align: center;
+    margin: 25px;
 }
 
 p {
@@ -94,7 +99,16 @@ p {
     text-align: center;
 }
 
-.inputs {
+.p-info {
+    font-size: 25px;
+    align-items: center;
+    padding: 0px 150px;
+    margin: 50px 50px;
+    line-height: 2;
+
+}
+
+.inputs-subscForm {
     display: flex;
     align-content: center;
     justify-content: space-between;
@@ -112,25 +126,32 @@ p {
     font-size: 12px;
 }
 
+.p-msgSucess {
+    color: red;
+    font-size: 40px;
+    padding: 0px 50px;
+}
+
 footer {
     display: flex;
     align-content: center;
     justify-content: space-around;
-    height: 100px;
+    height: 75px;
     padding: 0px 25px;
-    margin-top: 65px;
+    margin-top: 25px;
 }
 
 .footerLink {
-    color: tomato;
+    color: black;
     font-size: 15px;
 }
 
 .footerLink:hover {
-    color: #003e1f;
+    color: red;
     text-decoration: underline;
     transform: scale(1.3, 1.3);
 }
+
 .cart {
     display: flex;
     justify-content: space-evenly;
@@ -143,11 +164,12 @@ footer {
 
 h3 {
     font-size: 25px;
-    color: #003e1f;
+    color: blue;
 }
 
-spand {
-    color:  #01110a;
+span {
+    color:  #003e1f;
+    margin-left: 20px;
 }
 
 .card {
@@ -166,7 +188,48 @@ spand {
     align-items: center;
     border-radius: 10px;
     margin: 25px 25px;
+    padding: 10px;
+    line-height: 2;
 }
+
+.menuImg {
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    background-size: cover;
+    background-color: yellow;
+}
+.price {
+    color:#ba2d0b;
+    font-size: 22px;
+    width: 250px;
+    text-align: center;
+    word-spacing: 5px;
+    /* border: 1px solid red; */
+
+    background: linear-gradient(90deg, #ffae03 50%, transparent 50%),
+    linear-gradient(90deg, #ffae03 50%, transparent 50%),
+    linear-gradient(0deg, #ffae03 50%, transparent 50%),
+    linear-gradient(0deg, #ffae03 50%, transparent 50%);
+background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+background-size: 16px 4px, 16px 4px, 4px 16px, 4px 16px;
+background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
+border-radius: 10px;
+
+animation: spin 20s linear infinite;
+}
+
+.price:hover {
+	animation: spin 2s linear infinite;
+	color: green;
+}
+
+@keyframes spin {
+    to{
+        background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;;
+    }
+}
+
 .addBtn {
     font-size: 8px;
     margin: 10px;

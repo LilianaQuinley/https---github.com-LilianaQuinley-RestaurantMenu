@@ -12,6 +12,7 @@
     
 </head>
 
+
 <body>
     <section class="mainPage">
         <header class="header">
@@ -23,25 +24,37 @@
                 <a href="">Contact</a>
             </div>
         </header>
+        
+        <hr>
 
         <section class="orderBtn">
-            <button class="hotTapas">Hot Tapas</button>
+            <a href="#hotFood">
+            <button class="hotTapas" >Hot Tapas</button>
+            </a>
+            <a href="#coldFood">
             <button class="coldTapas">Cold Tapas</button>
+            </a>
+            <a href="#freshDrinks">
             <button class="drinks">Drinks</button>
+            </a>
+
         </section>
 
-        <section class="subscribeForm">
-            <h2>Be in the Know</h2>
-            <br/>
-            <p>Sign up and be the first to hear about new menu items, special promos & more!</p>
-            <br/>
-            <div class="inputs">
+        <section class="email">
+            <div class = "subscribeForm">
+                <h2>Be in the Know</h2>
+                <br/>
+                <p>Sign up and be the first to hear about new menu items, special promos & more!</p>
+                <br/>
+                <div class="inputs-subscForm">
                 <input type="text" placeholder="First Name" id="firstNameInput">
                 <input type="text" placeholder="Last Name" id=" lastNameInput">
                 <input type="text" placeholder="email Address" id="emailInput">
-                <button class="signUp"> Sign Up </button>
+                <button class="signUp" id ='signUpBtn'> Sign Up </button>
+                </div>
             </div>
         </section>
+    
         
         <footer class="footer">
             <a href="" class="footerLink">Careers</a>
@@ -53,14 +66,14 @@
     </section>
 
     <section class="cart">
-        <h3 class="order">Cold-Tapas: <span id="cartHotTapas" ></span> </h3>
-        <h3 class="order">Hot-Tapas: <span id="cartColdTapas" ></span> </h3>
-        <h3 class="order">Drinks: <span id="cartCountDrinks" ></span> </h3>
+        <h3 class="order">Hot-Tapas: <span id="hotTapasCart" ></span> </h3>
+        <h3 class="order">Cold-Tapas: <span id="coldTapasCart" ></span> </h3>
+        <h3 class="order">Drinks: <span id="drinksCart" ></span> </h3>
     </section>
 
-    <section class="hotMenu">
-        <h2>hot tapas</h2>
-        <p> Order up some of our famous paella and wash it down with an ice-cold beer—or better yet, 
+    <section class="hotMenu" id="hotFood">
+        <h2>HOT TAPAS</h2>
+        <p class="p-info"> Order up some of our famous paella and wash it down with an ice-cold beer—or better yet, 
             vermouth on tap. This slightly bitter, slightly sweet aperitif is the most delicious way 
             to open your appetite for a day of exploring tapas bars in Madrid!! </p>
         <div class="card" id="hotTapas"></div>
@@ -76,16 +89,16 @@
             </div> -->
     </section>
 
-    <section class="coldMenu">
-        <h2>Cold Tapas</h2>
-        <p>From salads to cold snacks like olives and cold soups. These make excellent pre-dinner snacks
+    <section class="coldMenu" id="coldFood">
+        <h2>COLD TAPAS</h2>
+        <p class="p-info">From salads to cold snacks like olives and cold soups. These make excellent pre-dinner snacks
         for your household or yourself after a long day</p>
         <div class="card" id="coldTapas"></div>
     </section>
 
-    <section class="coldDrinks">
-        <h2> Drinks</h2>
-        <p>If there's one thing Spanish cultures have all but perfected, it's the art of refreshing drinks
+    <section class="coldDrinks" id="freshDrinks">
+        <h2> DRINKS</h2>
+        <p class="p-info">If there's one thing Spanish cultures have all but perfected, it's the art of refreshing drinks
              for all seasons. But if your knowledge of Spanish beverages stops at sangria, have you got another 
              thing coming. These drinks will spice up your party, happy hour, or any time tipple.</p>
         <div class="card" id="drinks"></div>
