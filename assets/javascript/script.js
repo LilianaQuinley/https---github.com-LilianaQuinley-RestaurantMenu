@@ -181,6 +181,25 @@ function addToCartHotT (){
     }
 }
 
+// Function ClearCart 
+
+var clearHotTapas = document.querySelector('#hotTapasCart');
+var clearColdTapas = document.querySelector('#coldTapasCart');
+var clearDrinks = document.querySelector('#drinksCart');
+var clearBtn = document.querySelector('.clearCart')
+
+function clearCart (){
+    countHotTapas = 0;
+    countColdTapas = 0;
+    countDrinks = 0;
+    clearHotTapas.textContent = countHotTapas;
+    clearColdTapas.textContent = countColdTapas;
+    clearDrinks.textContent = countDrinks;  
+    console.log(clearCart);
+}
+clearBtn.addEventListener('click', clearCart);
+
+
 //function submitHandler subscrition  
 var email = document.querySelector(".email")
 var subscForm = document.querySelector('.subscribeForm');
